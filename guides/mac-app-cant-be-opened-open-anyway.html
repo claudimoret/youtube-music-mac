@@ -1,0 +1,55 @@
+<!-- {
+ "slug": "mac-app-cant-be-opened-open-anyway",
+ "lang": "en",
+ "title": "“App Can't Be Opened” on Mac? How to Open It Anyway (macOS Tahoe, Sequoia, Sonoma)",
+ "description": "macOS says a YouTube Music app like Tubemac or Kaset “can't be opened” or “Apple could not verify” it? Here's why, and how to open it safely with Open Anyway.",
+ "h1": "“Can't be opened” on Mac? How to open a downloaded app anyway",
+ "updated": "2026-11-08",
+ "read": "4 min",
+ "pair": "app-kann-nicht-geoeffnet-werden-mac",
+ "order": 8
+} -->
+    <div class="answer" style="margin:28px 0">
+      <p><strong>Short answer:</strong> macOS blocks apps from outside the App Store that aren't notarized by Apple – many free apps, including YouTube Music apps like Tubemac and Kaset, aren't. Try to open the app once, then go to <strong>System Settings → Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong>. You only need to do this once per app.</p>
+    </div>
+
+    <h2>Why macOS shows this warning</h2>
+    <p>Apple's Gatekeeper checks every app you download. Apps that are signed and “notarized” with a paid Apple developer membership open straight away. Free hobby projects often skip that membership, so macOS shows a warning such as <em>“Apple could not verify ‘Tubemac’ is free of malware”</em> or <em>“‘Tubemac’ Not Opened”</em>. It doesn't mean the app is broken – it means macOS wants you to confirm that you trust it.</p>
+
+    <h2>macOS 15 Sequoia and macOS 26 Tahoe</h2>
+    <ol class="howto" data-name="How to open an app that can't be opened on macOS Sequoia or Tahoe">
+      <li>Move the app into your <strong>Applications</strong> folder and double-click it. When the warning appears, click <strong>Done</strong>.</li>
+      <li>Open <strong>System Settings</strong> and choose <strong>Privacy &amp; Security</strong> in the sidebar.</li>
+      <li>Scroll down to <strong>Security</strong>. You'll see a message that the app was blocked – click <strong>Open Anyway</strong>.</li>
+      <li>Confirm with your password or Touch ID, then click <strong>Open Anyway</strong> in the dialog that appears.</li>
+    </ol>
+    <p>From now on the app opens normally, like any other app.</p>
+
+    <h2>macOS 14 Sonoma</h2>
+    <ol>
+      <li>In the <strong>Applications</strong> folder, hold <kbd>Control</kbd> and click the app (or right-click it).</li>
+      <li>Choose <strong>Open</strong>, then click <strong>Open</strong> in the dialog.</li>
+    </ol>
+    <p>The <strong>Open Anyway</strong> button in System Settings → Privacy &amp; Security works on Sonoma too.</p>
+
+    <h2>For advanced users: Terminal</h2>
+    <p>Removing the “downloaded from the internet” flag has the same effect:</p>
+    <pre>xattr -dr com.apple.quarantine /Applications/Tubemac.app</pre>
+    <p>Replace the app name with the one you installed.</p>
+
+    <h2>How to stay safe</h2>
+    <ul>
+      <li><strong>Download only from the official source</strong> – the project's own website or its GitHub releases page, not from download portals.</li>
+      <li><strong>Prefer open-source apps</strong> whose code anyone can read. Tubemac, Kaset, YTMDesktop and Pear Desktop are all open source.</li>
+      <li><strong>Never</strong> turn off Gatekeeper completely – allow individual apps instead.</li>
+    </ul>
+
+    <section class="faq-block">
+    <h2>FAQ</h2>
+    <h3>Why does my Mac say Tubemac can't be opened?</h3>
+    <p>Tubemac is a free app that isn't notarized by Apple, so macOS asks you to confirm it once. Open System Settings → Privacy &amp; Security and click Open Anyway.</p>
+    <h3>Where is “Open Anyway” on macOS Sequoia?</h3>
+    <p>In System Settings → Privacy &amp; Security, in the Security section further down. It only appears after you have tried to open the app once.</p>
+    <h3>Is it safe to click Open Anyway?</h3>
+    <p>It's safe for apps you trust and downloaded from their official source. Open-source apps like Tubemac publish their full code, so anyone can check what they do.</p>
+    </section>

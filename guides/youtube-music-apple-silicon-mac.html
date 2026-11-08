@@ -1,0 +1,49 @@
+<!-- {
+ "slug": "youtube-music-apple-silicon-mac",
+ "lang": "en",
+ "title": "YouTube Music on Apple Silicon Macs (M1 and Newer): Which Apps Run Natively",
+ "description": "Which YouTube Music apps run natively on Apple Silicon Macs? Tubemac, Kaset, YTMDesktop, Pear Desktop and the Safari web app checked – plus how to pick the right download.",
+ "h1": "YouTube Music on Apple Silicon Macs: which apps run natively",
+ "updated": "2026-11-08",
+ "read": "4 min",
+ "order": 5
+} -->
+    <div class="answer" style="margin:28px 0">
+      <p><strong>Short answer:</strong> all popular YouTube Music apps can run natively on Apple Silicon (M1 and newer). <a href="../">Tubemac</a> and Kaset are universal apps – one download works on every Mac. YTMDesktop and Pear Desktop have separate Apple Silicon downloads; pick the file with <strong>arm64</strong> in its name, otherwise the Intel version runs through Rosetta 2.</p>
+    </div>
+
+    <h2>Apple Silicon support at a glance</h2>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th>App</th><th>Apple Silicon</th><th>Which file to download</th><th>Minimum macOS</th></tr></thead>
+        <tbody>
+          <tr class="us"><th>Tubemac 1.1.0</th><td>Native (universal)</td><td>Tubemac.zip – one file for all Macs</td><td>14 Sonoma</td></tr>
+          <tr><th>Kaset 0.14.2</th><td>Native (universal)</td><td>kaset-….dmg</td><td>15.4</td></tr>
+          <tr><th>YTMDesktop 2.1.0</th><td>Native with arm64 build</td><td>…darwin-<b>arm64</b>….zip from GitHub releases</td><td>–</td></tr>
+          <tr><th>Pear Desktop 3.12.0</th><td>Native with arm64 build</td><td>YouTube-Music-…-<b>arm64</b>.dmg</td><td>–</td></tr>
+          <tr><th>Safari web app</th><td>Native</td><td>Built into Safari</td><td>14 Sonoma</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Checked by inspecting the latest release files on GitHub on 8 November 2026. “–” = not stated by the project.</p>
+
+    <h2>How to check if an app runs natively on your Mac</h2>
+    <ol class="howto" data-name="How to check whether a Mac app runs natively on Apple Silicon">
+      <li>Open the <strong>Applications</strong> folder in Finder.</li>
+      <li>Select the app and press <kbd>⌘</kbd> <kbd>I</kbd> (Get Info).</li>
+      <li>Look at <strong>Kind</strong>: “Application (Universal)” or “Application (Apple silicon)” runs natively; “Application (Intel)” runs through Rosetta 2.</li>
+    </ol>
+    <p>You can also open <strong>Activity Monitor</strong> and look at the <strong>Kind</strong> column while the app is running.</p>
+
+    <h2>Does it matter?</h2>
+    <p>For a music player, an Intel build running through Rosetta 2 works, but native apps start faster and use less energy – which you'll notice on a MacBook's battery over a long listening session. Size matters too: apps that bundle Chrome (Electron) are around 118 MB, while Tubemac is about 1 MB because it uses the web engine already built into macOS.</p>
+
+    <section class="faq-block">
+    <h2>FAQ</h2>
+    <h3>Does YouTube Music work on M1, M2, M3 and M4 Macs?</h3>
+    <p>Yes. YouTube Music runs in Safari and Chrome on every Apple Silicon Mac, and apps like Tubemac and Kaset are universal apps that run natively on all M-series chips.</p>
+    <h3>Which YouTube Music app is best for Apple Silicon?</h3>
+    <p>Tubemac is the smallest native option (1 MB, universal, macOS 14+). Kaset is native too but needs macOS 15.4 and Premium. YTMDesktop and Pear Desktop are native if you download their arm64 builds.</p>
+    <h3>Do I need Rosetta 2 for YouTube Music apps?</h3>
+    <p>Only if you install an Intel (x64) build. Choose the universal or arm64 download and Rosetta 2 isn't needed.</p>
+    </section>
