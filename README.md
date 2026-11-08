@@ -2,10 +2,10 @@
 
 <img src="docs/assets/icon.png" width="128" height="128" alt="Tubemac icon">
 
-# Tubemac – the YouTube Music app for Mac
+# Tubemac – the native YouTube Music app for Mac
 
 **YouTube Music, finally at home on your Mac.**<br>
-A free app that makes YouTube Music look, feel and behave like a real Mac app.<br>
+A free, native Mac app (Swift + WebKit, no Electron) that makes YouTube Music look, feel and behave like it belongs on your Mac.<br>
 1 MB · Apple Silicon & Intel · macOS 14+ · works with free and Premium accounts
 
 [**⬇ Download for Mac – free**](https://github.com/claudimoret/youtube-music-mac/releases/latest/download/Tubemac.zip) · [Website](https://claudimoret.github.io/youtube-music-mac/) · [Compare apps](https://claudimoret.github.io/youtube-music-mac/how-to-get-youtube-music-on-mac/) · [Deutsch](https://claudimoret.github.io/youtube-music-mac/de/) · [♥ Support](#-support)
