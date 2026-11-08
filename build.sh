@@ -10,7 +10,7 @@ cd "${0:A:h}"
 APP_NAME="${APP_NAME:-YTM Desktop}"
 BUNDLE_ID="${BUNDLE_ID:-io.github.claudimoret.ytm-desktop}"
 ICON_SCRIPT="${ICON_SCRIPT:-Tools/make-icon.swift}"
-VERSION="1.0.0"
+VERSION="1.0.1"
 EXECUTABLE="YTMDesktop"
 APP="build/$APP_NAME.app"
 

@@ -7,7 +7,7 @@
 **Use your YouTube Music subscription as a real macOS app.**<br>
 Free · open source · native Swift + WebKit · Apple Silicon & Intel · no tracking
 
-[**⬇ Download for Mac**](https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip) · [Website](https://claudimoret.github.io/youtube-music-mac/) · [Deutsch](#deutsch)
+[**⬇ Download for Mac**](https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip) · [Website](https://claudimoret.github.io/youtube-music-mac/) · [Deutsch](#deutsch) · [♥ Support](#support)
 
 <img src="docs/assets/screenshot-artist.png" alt="YTM Desktop: YouTube Music artist page in a native macOS window" width="900">
 
@@ -94,6 +94,20 @@ A `WKWebView` loads music.youtube.com with a Safari user agent and a persistent 
 3. Mit dem Google-Konto anmelden. Fragt Google nach dem Passkey: **„Andere Option wählen“ → „Passwort eingeben“** (Passkeys funktionieren in Apps ohne Google-Freigabe nicht).
 
 Voraussetzung: macOS 14 Sonoma oder neuer, Apple Silicon oder Intel.
+
+---
+
+<a name="support"></a>
+
+## ♥ Support
+
+YTM Desktop is free and made in my spare time. If you enjoy it, a small tip via PayPal is very welcome – totally optional.<br>
+*Gefällt dir die App? Über eine kleine Spende freue ich mich – ganz freiwillig.*
+
+[![Donate 1 €](https://img.shields.io/badge/Donate-1%20€-e8143c?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/morrret/1EUR)
+[![Donate 2 €](https://img.shields.io/badge/Donate-2%20€-e8143c?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/morrret/2EUR)
+[![Donate 5 €](https://img.shields.io/badge/Donate-5%20€-e8143c?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/morrret/5EUR)
+[![Other amount](https://img.shields.io/badge/Other%20amount-paypal.me%2Fmorrret-3a2a30?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/morrret)
 
 ---
 

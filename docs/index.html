@@ -31,7 +31,7 @@
   "alternateName": "YouTube Music for Mac (unofficial)",
   "operatingSystem": "macOS 14 or later",
   "applicationCategory": "MultimediaApplication",
-  "softwareVersion": "1.0.0",
+  "softwareVersion": "1.0.1",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "downloadUrl": "https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip",
   "url": "https://claudimoret.github.io/youtube-music-mac/",
@@ -98,7 +98,7 @@
   header.top {
     position: relative; z-index: 2;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 22px 0;
+    padding-top: 22px; padding-bottom: 22px;
   }
   .brand { display: flex; align-items: center; gap: 12px; color: var(--text); font-weight: 650; font-size: 18px; }
   .brand img { width: 36px; height: 36px; }
@@ -201,10 +201,48 @@
   .de ul { color: var(--muted); padding-left: 20px; margin: 0; }
   .de li { margin-bottom: 6px; }
 
+  nav.links a.heart { color: var(--red-1); }
+  .support .card {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center;
+    padding: 34px; border-radius: 24px; background: var(--card); border: 1px solid var(--card-border);
+  }
+  .support h2 { font-size: clamp(26px, 3.2vw, 34px); margin-bottom: 8px; }
+  .support p { color: var(--muted); margin: 0; }
+  .support p + p { margin-top: 8px; font-size: 15px; color: var(--faint); }
+  .amounts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+  .amount {
+    display: inline-flex; align-items: center; justify-content: center; min-width: 74px;
+    padding: 12px 18px; border-radius: 12px; font-weight: 650; color: var(--text);
+    background: rgba(255, 255, 255, .06); border: 1px solid var(--card-border);
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  }
+  .amount:hover { text-decoration: none; transform: translateY(-1px); background: rgba(232, 20, 60, .18); border-color: rgba(255, 92, 92, .5); }
+  .amount.other { font-weight: 500; color: var(--muted); }
+  .paypal-note { margin-top: 10px; text-align: right; font-size: 13px; color: var(--faint); }
+
+  .toast {
+    position: fixed; right: 20px; bottom: 20px; z-index: 50; width: min(360px, calc(100vw - 32px));
+    padding: 20px; border-radius: 18px; background: rgba(24, 16, 20, .92); border: 1px solid var(--card-border);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    transform: translateY(16px); opacity: 0; pointer-events: none; transition: opacity .25s ease, transform .25s ease;
+  }
+  .toast.show { transform: none; opacity: 1; pointer-events: auto; }
+  .toast h3 { margin: 0 0 6px; font-size: 17px; padding-right: 28px; }
+  .toast p { margin: 0 0 14px; color: var(--muted); font-size: 14.5px; }
+  .toast .amounts { justify-content: flex-start; gap: 8px; }
+  .toast .amount { min-width: 0; padding: 9px 14px; font-size: 15px; }
+  .toast .close {
+    position: absolute; top: 12px; right: 12px; width: 28px; height: 28px; border-radius: 50%;
+    border: 0; background: rgba(255, 255, 255, .08); color: var(--muted); font-size: 16px; cursor: pointer;
+  }
+  .toast .close:hover { background: rgba(255, 255, 255, .16); color: var(--text); }
+
   footer { padding: 48px 0 64px; color: var(--faint); font-size: 14px; border-top: 1px solid var(--card-border); }
   footer .row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
 
   @media (max-width: 860px) {
+    .support .card { grid-template-columns: 1fr; }
+    .amounts, .paypal-note { justify-content: flex-start; text-align: left; }
     .grid, .steps { grid-template-columns: 1fr 1fr; }
     .why, .de .cols, .gallery { grid-template-columns: 1fr; }
   }
@@ -227,6 +265,7 @@
       <a href="#install">Install</a>
       <a href="#faq">FAQ</a>
       <a href="#deutsch">Deutsch</a>
+      <a class="heart" href="#support">♥ Support</a>
       <a href="https://github.com/claudimoret/youtube-music-mac">GitHub</a>
     </nav>
   </header>
@@ -239,7 +278,7 @@
       <h1>YouTube Music,<br><span class="accent">as a real Mac app.</span></h1>
       <p class="lede">There is no official YouTube Music app for macOS. YTM Desktop turns the web player into a lightweight, native app with its own Dock icon, media keys, Control Center integration and background playback.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip">
+        <a class="btn btn-primary" href="https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip" data-download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
           Download for Mac
         </a>
@@ -343,7 +382,7 @@
     <div class="steps">
       <div class="step">
         <h3>Download &amp; unzip</h3>
-        <p><a href="https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip">Download YTM-Desktop.zip</a> and move <code>YTM Desktop.app</code> into your Applications folder.</p>
+        <p><a href="https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip" data-download>Download YTM-Desktop.zip</a> and move <code>YTM Desktop.app</code> into your Applications folder.</p>
       </div>
       <div class="step">
         <h3>Allow the first launch</h3>
@@ -385,6 +424,27 @@
   </div>
 </section>
 
+<section id="support" class="support">
+  <div class="wrap">
+    <div class="card">
+      <div>
+        <h2>Enjoying YTM Desktop? ♥</h2>
+        <p>It's free, open source and made in my spare time. If it makes your day a little better, you can buy me a coffee – totally optional.</p>
+        <p lang="de">Gefällt dir die App? Über eine kleine Spende freue ich mich – ganz freiwillig.</p>
+      </div>
+      <div>
+        <div class="amounts">
+          <a class="amount" href="https://www.paypal.com/paypalme/morrret/1EUR" target="_blank" rel="noopener">1 €</a>
+          <a class="amount" href="https://www.paypal.com/paypalme/morrret/2EUR" target="_blank" rel="noopener">2 €</a>
+          <a class="amount" href="https://www.paypal.com/paypalme/morrret/5EUR" target="_blank" rel="noopener">5 €</a>
+          <a class="amount other" href="https://www.paypal.com/paypalme/morrret" target="_blank" rel="noopener">Other</a>
+        </div>
+        <div class="paypal-note">via PayPal · paypal.me/morrret</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="deutsch" class="de" lang="de">
   <div class="wrap">
     <h2>YouTube Music als Mac-App – auf Deutsch</h2>
@@ -404,7 +464,7 @@
       <div>
         <h3>Installation</h3>
         <ul>
-          <li><a href="https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip">YTM-Desktop.zip herunterladen</a>, entpacken und in „Programme“ ziehen</li>
+          <li><a href="https://github.com/claudimoret/youtube-music-mac/releases/latest/download/YTM-Desktop.zip" data-download>YTM-Desktop.zip herunterladen</a>, entpacken und in „Programme“ ziehen</li>
           <li>Beim ersten Start: <strong>Systemeinstellungen → Datenschutz &amp; Sicherheit → „Dennoch öffnen“</strong></li>
           <li>Mit deinem Google-Konto anmelden. Bei Passkey-Abfrage „Andere Option wählen“ → „Passwort eingeben“</li>
         </ul>
@@ -415,10 +475,35 @@
 
 <footer>
   <div class="wrap row">
-    <span>YTM Desktop · MIT License · <a href="https://github.com/claudimoret/youtube-music-mac">github.com/claudimoret/youtube-music-mac</a></span>
+    <span>YTM Desktop · MIT License · <a href="https://github.com/claudimoret/youtube-music-mac">GitHub</a> · <a href="#support">♥ Support the project</a></span>
     <span>Unofficial project. YouTube Music is a trademark of Google LLC. This app is not affiliated with, endorsed or sponsored by Google.</span>
   </div>
 </footer>
+
+<div class="toast" id="thanks" role="dialog" aria-live="polite" aria-labelledby="thanks-title">
+  <button class="close" type="button" aria-label="Close">✕</button>
+  <h3 id="thanks-title">Thanks for downloading! 🎧</h3>
+  <p>Your download has started. YTM Desktop is free – if you like it, a small tip keeps it going.</p>
+  <div class="amounts">
+    <a class="amount" href="https://www.paypal.com/paypalme/morrret/1EUR" target="_blank" rel="noopener">1 €</a>
+    <a class="amount" href="https://www.paypal.com/paypalme/morrret/2EUR" target="_blank" rel="noopener">2 €</a>
+    <a class="amount" href="https://www.paypal.com/paypalme/morrret/5EUR" target="_blank" rel="noopener">5 €</a>
+  </div>
+</div>
+<script>
+  (() => {
+    const toast = document.getElementById('thanks');
+    const seen = () => { try { return sessionStorage.getItem('ytm-thanks') === '1'; } catch (e) { return false; } };
+    const remember = () => { try { sessionStorage.setItem('ytm-thanks', '1'); } catch (e) {} };
+    document.querySelectorAll('[data-download]').forEach((a) => a.addEventListener('click', () => {
+      if (seen()) return;
+      remember();
+      setTimeout(() => toast.classList.add('show'), 600);
+    }));
+    toast.querySelector('.close').addEventListener('click', () => toast.classList.remove('show'));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toast.classList.remove('show'); });
+  })();
+</script>
 
 </body>
 </html>

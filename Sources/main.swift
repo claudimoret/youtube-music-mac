@@ -273,6 +273,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate,
 
         let appMenu = NSMenu()
         appMenu.addItem(withTitle: L("About \(appName)", "Über \(appName)"), action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
+        appMenu.addItem(withTitle: L("Support \(appName) …", "\(appName) unterstützen …"), action: #selector(openDonation), keyEquivalent: "")
         appMenu.addItem(.separator())
         appMenu.addItem(withTitle: L("Hide \(appName)", "\(appName) ausblenden"), action: #selector(NSApplication.hide(_:)), keyEquivalent: "h")
         let hideOthers = appMenu.addItem(withTitle: L("Hide Others", "Andere ausblenden"), action: #selector(NSApplication.hideOtherApplications(_:)), keyEquivalent: "h")
@@ -374,6 +375,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate,
     }
 
     // MARK: - Account
+
+    @objc private func openDonation() {
+        NSWorkspace.shared.open(URL(string: "https://www.paypal.com/paypalme/morrret")!)
+    }
 
     @objc private func openPasswordsApp() {
         let url = URL(fileURLWithPath: "/System/Applications/Passwords.app")
