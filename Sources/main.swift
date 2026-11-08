@@ -1,10 +1,10 @@
 import AppKit
 import WebKit
 
-// YTM Desktop: an unofficial native macOS wrapper for YouTube Music.
+// Tubemac: a lightweight, unofficial YouTube Music app for macOS.
 // Not affiliated with, endorsed by or sponsored by Google LLC.
 
-private let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "YTM Desktop"
+private let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "Tubemac"
 private let isGerman = Locale.preferredLanguages.first?.hasPrefix("de") ?? false
 private func L(_ english: String, _ german: String) -> String { isGerman ? german : english }
 

@@ -1,17 +1,17 @@
 #!/bin/zsh
-# Builds "YTM Desktop.app" (universal: Apple Silicon + Intel) into ./build.
+# Builds "Tubemac.app" (universal: Apple Silicon + Intel) into ./build.
 #   ./build.sh            build only
 #   ./build.sh --install  build and copy to /Applications
-#   ./build.sh --zip      build and create build/YTM-Desktop.zip for a release
+#   ./build.sh --zip      build and create build/Tubemac.zip for a release
 # APP_NAME, BUNDLE_ID and ICON_SCRIPT can be overridden via environment variables.
 set -euo pipefail
 cd "${0:A:h}"
 
-APP_NAME="${APP_NAME:-YTM Desktop}"
-BUNDLE_ID="${BUNDLE_ID:-io.github.claudimoret.ytm-desktop}"
+APP_NAME="${APP_NAME:-Tubemac}"
+BUNDLE_ID="${BUNDLE_ID:-io.github.claudimoret.tubemac}"
 ICON_SCRIPT="${ICON_SCRIPT:-Tools/make-icon.swift}"
-VERSION="1.0.1"
-EXECUTABLE="YTMDesktop"
+VERSION="1.1.0"
+EXECUTABLE="Tubemac"
 APP="build/$APP_NAME.app"
 
 rm -rf build && mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
@@ -43,7 +43,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>LSApplicationCategoryType</key><string>public.app-category.music</string>
   <key>NSHighResolutionCapable</key><true/>
-  <key>NSHumanReadableCopyright</key><string>Unofficial YouTube Music client. Not affiliated with Google LLC.</string>
+  <key>NSHumanReadableCopyright</key><string>Tubemac – unofficial YouTube Music app for Mac. Not affiliated with Google LLC.</string>
 </dict>
 </plist>
 PLIST

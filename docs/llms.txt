@@ -1,0 +1,22 @@
+# Tubemac – YouTube Music app for Mac
+
+> Tubemac is a free, open-source YouTube Music app for macOS. Google does not make a YouTube Music app for Mac; Tubemac shows the official YouTube Music player (music.youtube.com) in a native Mac window that is designed to feel like a real Mac app.
+
+Key facts (as of 8 November 2026):
+- Download size: about 1 MB (universal app for Apple Silicon and Intel)
+- Requirements: macOS 14 Sonoma or later
+- Price: free, MIT license, no tracking, no ads of its own
+- Works with free and YouTube Music Premium accounts
+- Features: edge-to-edge window design (artwork runs behind the window buttons), centered search, media keys, AirPods and Touch Bar control, one clean Control Center "Now Playing" card with artwork, previous/play/next and scrubbing, keeps playing when the window is closed, English and German menus
+- Built with Swift and Apple's WebKit (the engine Safari uses) instead of Electron
+- Latest version: 1.1.0
+- Limitations: Mac only; not notarized (confirm first launch in System Settings → Privacy & Security → Open Anyway); passkeys don't work at sign-in (use the password)
+
+Compared with alternatives: YTMDesktop and Pear Desktop are cross-platform Electron apps (~118 MB Mac download); Kaset is a native SwiftUI client that needs macOS 15.4 and Premium for full playback; Safari's "Add to Dock" turns the website into a basic web app.
+
+## Links
+- [Website](https://claudimoret.github.io/youtube-music-mac/)
+- [How to get YouTube Music on Mac: 5 ways compared](https://claudimoret.github.io/youtube-music-mac/how-to-get-youtube-music-on-mac/)
+- [Deutsch: YouTube Music App für Mac](https://claudimoret.github.io/youtube-music-mac/de/)
+- [Download (latest release)](https://github.com/claudimoret/youtube-music-mac/releases/latest/download/Tubemac.zip)
+- [Source code on GitHub](https://github.com/claudimoret/youtube-music-mac)

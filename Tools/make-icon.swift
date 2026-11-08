@@ -1,4 +1,4 @@
-// Renders the YTM Desktop app icon into an .iconset folder: swift make-icon.swift <out.iconset>
+// Renders the Tubemac app icon into an .iconset folder: swift make-icon.swift <out.iconset>
 import AppKit
 
 let out = CommandLine.arguments[1]
