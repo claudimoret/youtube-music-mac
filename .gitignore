@@ -1,0 +1,5 @@
+build/
+.DS_Store
+# Private variant (own name/icon), not published
+build-private.sh
+Tools/make-icon-private.swift
