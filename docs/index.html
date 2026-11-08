@@ -406,14 +406,25 @@
   </div>
 </footer>
 
-<div class="toast" id="thanks" role="dialog" aria-live="polite" aria-labelledby="thanks-title">
-  <button class="close" type="button" aria-label="Close">✕</button>
-  <h3 id="thanks-title">Thanks for downloading! 🎧</h3>
-  <p>Your download has started. Tubemac is free – if you like it, a small tip keeps it going.</p>
-  <div class="amounts">
-    <a class="amount" href="https://www.paypal.com/paypalme/morrret/1EUR" target="_blank" rel="noopener">1 €</a>
-    <a class="amount" href="https://www.paypal.com/paypalme/morrret/2EUR" target="_blank" rel="noopener">2 €</a>
-    <a class="amount" href="https://www.paypal.com/paypalme/morrret/5EUR" target="_blank" rel="noopener">5 €</a>
+<div class="modal" id="thanks" role="dialog" aria-modal="true" aria-labelledby="thanks-title">
+  <div class="box">
+    <button class="close" type="button" aria-label="Close" data-close>✕</button>
+    <img src="assets/icon.png" alt="" width="72" height="72">
+    <h3 id="thanks-title">Thanks for downloading Tubemac! 🎧</h3>
+    <p>Your download has started.</p>
+    <div class="next">
+      <ol>
+        <li>Open <strong>Tubemac.zip</strong> and drag <strong>Tubemac</strong> into <strong>Applications</strong>.</li>
+        <li>First launch: <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.</li>
+      </ol>
+    </div>
+    <p class="tip">Tubemac is free. If you like it, a small tip keeps it going ♥</p>
+    <div class="amounts">
+      <a class="amount" href="https://www.paypal.com/paypalme/morrret/1EUR" target="_blank" rel="noopener">1 €</a>
+      <a class="amount" href="https://www.paypal.com/paypalme/morrret/2EUR" target="_blank" rel="noopener">2 €</a>
+      <a class="amount" href="https://www.paypal.com/paypalme/morrret/5EUR" target="_blank" rel="noopener">5 €</a>
+    </div>
+    <button class="later" type="button" data-close>Maybe later</button>
   </div>
 </div>
 <script src="assets/site.js" defer></script>
