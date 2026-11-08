@@ -36,26 +36,82 @@
       "softwareVersion": "1.1.0",
       "fileSize": "1 MB",
       "inLanguage": "de",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
       "downloadUrl": "https://github.com/claudimoret/youtube-music-mac/releases/latest/download/Tubemac.zip",
       "url": "https://claudimoret.github.io/youtube-music-mac/de/",
       "image": "https://claudimoret.github.io/youtube-music-mac/assets/icon.png",
       "screenshot": "https://claudimoret.github.io/youtube-music-mac/assets/screenshot-artist.png",
       "isAccessibleForFree": true,
-      "author": { "@type": "Person", "name": "claudimoret", "url": "https://github.com/claudimoret" }
+      "author": {
+        "@type": "Person",
+        "name": "claudimoret",
+        "url": "https://github.com/claudimoret"
+      }
     },
     {
       "@type": "FAQPage",
       "inLanguage": "de",
       "mainEntity": [
-        { "@type": "Question", "name": "Gibt es eine YouTube Music App für den Mac?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Von Google nicht – auf dem Mac läuft YouTube Music offiziell nur im Browser. Tubemac ist eine kostenlose App, die den offiziellen YouTube-Music-Player in ein echtes Mac-Fenster bringt, mit Mediatasten, Kontrollzentrum und Wiedergabe im Hintergrund. Der Download ist 1 MB groß und läuft auf Apple Silicon und Intel ab macOS 14." } },
-        { "@type": "Question", "name": "Ist Tubemac kostenlos?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Tubemac ist kostenlos und Open Source (MIT-Lizenz), ohne eigene Werbung und ohne Tracking. Du meldest dich einfach mit deinem Google-Konto an." } },
-        { "@type": "Question", "name": "Brauche ich YouTube Music Premium?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Nein. Tubemac funktioniert mit kostenlosen und Premium-Konten, genau wie music.youtube.com im Browser." } },
-        { "@type": "Question", "name": "Warum sagt macOS, dass Tubemac nicht geöffnet werden kann?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Tubemac ist nicht von Apple beglaubigt (notarisiert). Öffne Systemeinstellungen → Datenschutz & Sicherheit und klicke auf „Dennoch öffnen“. Danach startet die App ganz normal." } }
+        {
+          "@type": "Question",
+          "name": "Gibt es eine YouTube Music App für den Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Von Google nicht – auf dem Mac läuft YouTube Music offiziell nur im Browser. Tubemac schließt diese Lücke: Die kostenlose App bringt den offiziellen YouTube-Music-Player in ein echtes Mac-Fenster, mit Mediatasten, Kontrollzentrum und Wiedergabe im Hintergrund. 1 MB, für Apple Silicon und Intel ab macOS 14."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist Tubemac kostenlos? Gibt es Werbung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tubemac ist komplett kostenlos und Open Source, ohne eigene Werbung und ohne Tracking. Mit einem kostenlosen YouTube-Music-Konto siehst du die üblichen Anzeigen von YouTube, wie im Browser – mit Premium nicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Brauche ich YouTube Music Premium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Tubemac funktioniert mit kostenlosen und Premium-Konten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Läuft Tubemac auf Apple Silicon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Tubemac ist eine Universal-App und läuft nativ auf Apple Silicon (M1 und neuer) und auf Intel-Macs mit macOS 14 Sonoma oder neuer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum sagt macOS, dass Tubemac nicht geöffnet werden kann?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tubemac ist nicht von Apple beglaubigt (notarisiert), das kostet eine bezahlte Entwicklermitgliedschaft. Öffne einmal Systemeinstellungen → Datenschutz & Sicherheit und klicke auf „Dennoch öffnen“. Danach startet die App ganz normal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum kann ich mich nicht mit meinem Passkey anmelden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "macOS gibt Passkeys und gespeicherte Passwörter nur an Safari und an Apps weiter, die Google offiziell freigegeben hat. Wähle auf der Google-Anmeldeseite „Andere Option wählen“ → „Passwort eingeben“. Das ist nur einmal nötig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist Tubemac sicher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tubemac verbindet sich nur mit YouTube Music und der Google-Anmeldung – sonst nichts. Keine Analyse, keine eigenen Server, und der komplette Quellcode ist öffentlich auf GitHub."
+          }
+        }
       ]
     }
   ]
@@ -224,6 +280,14 @@
     <details>
       <summary>Brauche ich YouTube Music Premium?</summary>
       <p>Nein. Tubemac funktioniert mit kostenlosen und Premium-Konten.</p>
+    </details>
+    <details>
+      <summary>Läuft Tubemac auf Apple Silicon?</summary>
+      <p>Ja. Tubemac ist eine Universal-App und läuft nativ auf Apple Silicon (M1 und neuer) und auf Intel-Macs mit macOS 14 Sonoma oder neuer.</p>
+    </details>
+    <details>
+      <summary>Warum sagt macOS, dass Tubemac nicht geöffnet werden kann?</summary>
+      <p>Tubemac ist nicht von Apple beglaubigt (notarisiert), das kostet eine bezahlte Entwicklermitgliedschaft. Öffne einmal <strong>Systemeinstellungen → Datenschutz &amp; Sicherheit</strong> und klicke auf <strong>„Dennoch öffnen“</strong>. Danach startet die App ganz normal.</p>
     </details>
     <details>
       <summary>Warum kann ich mich nicht mit meinem Passkey anmelden?</summary>
